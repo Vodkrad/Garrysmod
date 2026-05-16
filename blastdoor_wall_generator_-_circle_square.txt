@@ -1,0 +1,270 @@
+--@name Blastdoor Wall Generator - Circle Square
+--@server
+
+local MODEL = "models/props_lab/blastdoor001c.mdl"
+
+local MIN_SIZE = 10
+local MAX_SIZE = 3000
+local MIN_HEIGHT = 1
+local MAX_HEIGHT = 20
+
+local DOOR_WIDTH = 128
+local ROW_GAP = 100
+local SPAWN_DELAY = 0.3
+
+local wallProps = {}
+local queue = {}
+local spawnIndex = 1
+local spawning = false
+
+local WALL_OFFSET = 0
+
+local function clamp(n, min, max)
+    if n < min then return min end
+    if n > max then return max end
+    return n
+end
+
+local function splitWords(str)
+    local words = {}
+
+    for word in string.gmatch(str, "%S+") do
+        table.insert(words, word)
+    end
+
+    return words
+end
+
+local function removeWall()
+    spawning = false
+    timer.remove("blastdoor_wall_spawn")
+
+    for _, ent in ipairs(wallProps) do
+        if ent and ent:isValid() then
+            ent:remove()
+        end
+    end
+
+    wallProps = {}
+    queue = {}
+    spawnIndex = 1
+
+    print("Wall removed.")
+end
+
+local function addDoor(pos, yaw)
+    local ang = Angle(0, yaw + 180, 0)
+
+    table.insert(queue, {
+        pos = pos,
+        ang = ang
+    })
+end
+
+-------------------------------------------------
+-- CIRCLE WALL
+-------------------------------------------------
+
+local function buildCircle(size, heightRows)
+    local center = chip():getPos()
+    local radius = size
+
+    local panels = math.floor((2 * math.pi * radius) / DOOR_WIDTH)
+    panels = clamp(panels, 8, 120)
+
+    for row = 0, heightRows - 1 do
+        local z = row * ROW_GAP + WALL_OFFSET
+
+        for i = 0, panels - 1 do
+            local a = (i / panels) * math.pi * 2
+
+            local pos = center + Vector(
+                math.cos(a) * radius,
+                math.sin(a) * radius,
+                z
+            )
+
+            addDoor(pos, math.deg(a))
+        end
+    end
+end
+
+-------------------------------------------------
+-- SQUARE WALL
+-------------------------------------------------
+
+local function buildSquare(size, heightRows)
+    local center = chip():getPos()
+
+    local half = size
+    local perSide = math.floor((half * 2) / DOOR_WIDTH)
+
+    perSide = clamp(perSide, 2, 50)
+
+    for row = 0, heightRows - 1 do
+        local z = row * ROW_GAP + WALL_OFFSET
+
+        -------------------------------------------------
+        -- FRONT
+        -------------------------------------------------
+
+        for i = 0, perSide do
+            local x = -half + (i / perSide) * (half * 2)
+
+            local pos = center + Vector(x, half, z)
+            addDoor(pos, 90)
+        end
+
+        -------------------------------------------------
+        -- BACK
+        -------------------------------------------------
+
+        for i = 0, perSide do
+            local x = -half + (i / perSide) * (half * 2)
+
+            local pos = center + Vector(x, -half, z)
+            addDoor(pos, -90)
+        end
+
+        -------------------------------------------------
+        -- LEFT
+        -------------------------------------------------
+
+        for i = 0, perSide do
+            local y = -half + (i / perSide) * (half * 2)
+
+            local pos = center + Vector(-half, y, z)
+            addDoor(pos, 180)
+        end
+
+        -------------------------------------------------
+        -- RIGHT
+        -------------------------------------------------
+
+        for i = 0, perSide do
+            local y = -half + (i / perSide) * (half * 2)
+
+            local pos = center + Vector(half, y, z)
+            addDoor(pos, 0)
+        end
+    end
+end
+
+-------------------------------------------------
+-- BUILD WALL
+-------------------------------------------------
+
+local function buildWall(shape, size, heightRows)
+    removeWall()
+
+    size = clamp(tonumber(size) or 800, MIN_SIZE, MAX_SIZE)
+    heightRows = clamp(tonumber(heightRows) or 3, MIN_HEIGHT, MAX_HEIGHT)
+
+    if shape == "circle" then
+        buildCircle(size, heightRows)
+        print("Queued circle wall.")
+    elseif shape == "square" then
+        buildSquare(size, heightRows)
+        print("Queued square wall.")
+    else
+        print("Invalid shape. Use square or circle.")
+    end
+end
+
+local function startSpawning()
+    spawning = true
+    timer.remove("blastdoor_wall_spawn")
+
+    timer.create("blastdoor_wall_spawn", SPAWN_DELAY, 0, function()
+        if not spawning then
+            timer.remove("blastdoor_wall_spawn")
+            return
+        end
+
+        local data = queue[spawnIndex]
+
+        if not data then
+            spawning = false
+            timer.remove("blastdoor_wall_spawn")
+            print("Wall finished.")
+            return
+        end
+
+        local ent = prop.create(data.pos, data.ang, MODEL, true)
+
+        if ent and ent:isValid() then
+            ent:setFrozen(true)
+            table.insert(wallProps, ent)
+        end
+
+        spawnIndex = spawnIndex + 1
+    end)
+end
+
+local function generateWall(shape, size, heightRows)
+    buildWall(shape, size, heightRows)
+    startSpawning()
+end
+
+hook.add("PlayerSay", "blastdoor_wall_commands", function(ply, text)
+    if ply ~= owner() then return end
+
+    text = string.lower(text)
+    local args = splitWords(text)
+
+    -------------------------------------------------
+    -- GENERATE
+    -------------------------------------------------
+
+    if args[1] == "!generate" then
+        generateWall(args[2], args[3], args[4])
+        return ""
+    end
+
+    -------------------------------------------------
+    -- REMOVE
+    -------------------------------------------------
+
+    if args[1] == "!removewall" then
+        removeWall()
+        return ""
+    end
+
+    -------------------------------------------------
+    -- LOWER
+    -------------------------------------------------
+
+    if args[1] == "!lowerwall" then
+        local amount = tonumber(args[2]) or 0
+
+        WALL_OFFSET = WALL_OFFSET - amount
+
+        print("Wall lowered.")
+        print("Offset: " .. WALL_OFFSET)
+
+        return ""
+    end
+
+    -------------------------------------------------
+    -- RAISE
+    -------------------------------------------------
+
+    if args[1] == "!raisewall" then
+        local amount = tonumber(args[2]) or 0
+
+        WALL_OFFSET = WALL_OFFSET + amount
+
+        print("Wall raised.")
+        print("Offset: " .. WALL_OFFSET)
+
+        return ""
+    end
+end)
+
+print("Quick Base Builder by stonerrabbit loaded.")
+print("Commands:")
+print("!generate circle 800 5")
+print("!generate square 800 5")
+print("!removewall")
+print("!lowerwall 100")
+print("!raisewall 100")
