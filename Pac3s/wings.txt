@@ -1,0 +1,1193 @@
+[1] = {
+	["children"] = {
+		[1] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "699326159",
+										["URL"] = "https://www.dropbox.com/s/x1gzqzdesp2rqvn/wings%20flap%20deep%201.ogg?dl=0",
+										["Name"] = "wings%20flap%20deep%201",
+										["PlayCount"] = 9999,
+										["ClassName"] = "ogg",
+										["Radius"] = 600,
+										["Volume"] = 0.4,
+										["Pitch"] = 1.04,
+										["EditorExpand"] = true,
+									},
+								},
+								[2] = {
+									["children"] = {
+										[1] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1472390743",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(73.310272216797, 0.0058862725272775, 0.00074916175799444),
+												["Size"] = 0.525,
+												["ClassName"] = "model",
+												["Position"] = Vector(-3.553466796875, -0.315185546875, 3.9521484375),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[2] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.2999999523163, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-70.848190307617, -9.1889181137085, 5.8501472473145),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-3.229736328125, 0.3759765625, -2.74951171875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[3] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-6.124267578125, 0.494384765625, -0.33154296875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[4] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-76.162719726563, -11.467157363892, 8.0373487472534),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(-0.51171875, 0.154541015625, -1.82958984375),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[5] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(2, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-23.914695739746, -4.5109629631042, 2.0960781574249),
+												["Size"] = 0.475,
+												["ClassName"] = "model",
+												["Position"] = Vector(-10.757080078125, 0.667236328125, 3.8642578125),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[6] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(-6.6136317253113, -3.8831853866577, 1.9291032552719),
+												["Size"] = 0.675,
+												["ClassName"] = "model",
+												["Position"] = Vector(-14.3232421875, 0.834228515625, 5.74169921875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[7] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Max"] = 11.7,
+												["ClassName"] = "proxy",
+												["UniqueID"] = "1182950886",
+												["InputMultiplier"] = 12,
+												["Axis"] = "y",
+												["EditorExpand"] = true,
+												["Min"] = -46.8,
+												["VariableName"] = "AngleOffset",
+											},
+										},
+										[8] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(1.7999999523163, 0.20000000298023, 0.5),
+												["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+												["Size"] = 0.4,
+												["ClassName"] = "model",
+												["Position"] = Vector(-8.525146484375, 0.54345703125, 2.75390625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[9] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(8.0724363327026, -3.3893117904663, 1.9350301027298),
+												["Size"] = 0.8,
+												["ClassName"] = "model",
+												["Position"] = Vector(-16.786376953125, 0.864013671875, 9.4140625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[10] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.5, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-52.694175720215, -6.1774663925171, 3.1629436016083),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-5.36181640625, 0.50537109375, -2.4091796875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[11] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-76.162719726563, -11.467157363892, 8.0373487472534),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(0.495361328125, 0.083740234375, -1.90966796875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[12] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-73.366561889648, -10.090292930603, 6.7084183692932),
+												["Size"] = 0.3,
+												["ClassName"] = "model",
+												["Position"] = Vector(1.668212890625, -0.004638671875, -2.06982421875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[13] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1472390743",
+												["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+												["Size"] = 0.4,
+												["ClassName"] = "model",
+												["Position"] = Vector(-7.732666015625, 0.563720703125, 0.732421875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[14] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.2999999523163, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-81.464385986328, -16.541213989258, 13.020378112793),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(-1.77099609375, 0.260986328125, -2.4541015625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[15] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Max"] = -41.5,
+												["ClassName"] = "proxy",
+												["UniqueID"] = "2477706671",
+												["InputMultiplier"] = 12,
+												["Axis"] = "x",
+												["EditorExpand"] = true,
+												["Min"] = 13.2,
+												["VariableName"] = "AngleOffset",
+											},
+										},
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Position"] = Vector(-1.5133056640625, -2.798828125, -1.9306640625),
+										["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+										["EditorExpand"] = true,
+										["AngleOffset"] = Angle(-15.270773887634, -16.351366043091, 0),
+										["Size"] = 0.35,
+										["PositionOffset"] = Vector(-2.0999999046326, 0, -0.30000001192093),
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Angles"] = Angle(-87.341354370117, 2.64927983284, 177.33442687988),
+									},
+								},
+								[3] = {
+									["children"] = {
+										[1] = {
+											["children"] = {
+												[1] = {
+													["children"] = {
+													},
+													["self"] = {
+														["Angles"] = Angle(14.255232810974, -4.9330283218296e-05, 0.00010042234498542),
+														["Bone"] = "lrig lefteg fl rightadius",
+														["UniqueID"] = "321717787",
+														["ClassName"] = "bone",
+													},
+												},
+											},
+											["self"] = {
+												["Angles"] = Angle(16.03582572937, 60.747909545898, 30.68846321106),
+												["Position"] = Vector(-1.6122894287109, 0.94964599609375, 0.1435546875),
+												["UniqueID"] = "2743225141",
+												["Bone"] = "lrig lefteg fl humerus",
+												["ClassName"] = "bone",
+												["EditorExpand"] = true,
+											},
+										},
+										[2] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Angles"] = Angle(-2.5897223949432, -39.486961364746, -7.5208896305412e-05),
+												["Bone"] = "lrig lefteg bl femur",
+												["UniqueID"] = "867229995",
+												["ClassName"] = "bone",
+											},
+										},
+										[3] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Angles"] = Angle(6.0633635520935, -47.974159240723, -15.014300346375),
+												["Bone"] = "lrig lefteg br femur",
+												["UniqueID"] = "3860233159",
+												["ClassName"] = "bone",
+											},
+										},
+										[4] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Event"] = "speed",
+												["UniqueID"] = "1450935787",
+												["Operator"] = "below",
+												["ClassName"] = "event",
+												["Arguments"] = "550",
+											},
+										},
+										[5] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Loop"] = false,
+												["ClassName"] = "animation",
+												["UniqueID"] = "1447354695",
+												["SequenceName"] = "ragdoll",
+											},
+										},
+										[6] = {
+											["children"] = {
+												[1] = {
+													["children"] = {
+													},
+													["self"] = {
+														["Angles"] = Angle(13.697784423828, -6.6786313254852e-05, 0.00016169316950254),
+														["Bone"] = "lrig lefteg fr rightadius",
+														["UniqueID"] = "2675354099",
+														["ClassName"] = "bone",
+													},
+												},
+											},
+											["self"] = {
+												["Angles"] = Angle(-11.72080039978, 75.928230285645, -3.9063444137573),
+												["UniqueID"] = "846050601",
+												["Bone"] = "lrig lefteg fr humerus",
+												["ClassName"] = "bone",
+												["EditorExpand"] = true,
+											},
+										},
+										[7] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Angles"] = Angle(-8.5377359937411e-06, 49.728370666504, -8.5377369032358e-06),
+												["Position"] = Vector(0.0482177734375, -1.2672424316406, 0),
+												["Bone"] = "tail 02",
+												["UniqueID"] = "3273499921",
+												["ClassName"] = "bone",
+											},
+										},
+									},
+									["self"] = {
+										["ClassName"] = "group",
+										["UniqueID"] = "4062835481",
+										["Name"] = "fast speed pose",
+									},
+								},
+								[4] = {
+									["children"] = {
+										[1] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Max"] = 0,
+												["ClassName"] = "proxy",
+												["UniqueID"] = "873476838",
+												["Axis"] = "z",
+												["InputMultiplier"] = 12,
+												["Min"] = 0.4,
+												["VariableName"] = "PositionOffset",
+											},
+										},
+									},
+									["self"] = {
+										["ClassName"] = "bone",
+										["UniqueID"] = "1826564358",
+										["PositionOffset"] = Vector(0, 0, 0.14828433096409),
+										["Hide"] = true,
+										["Name"] = "lrigpelvis BOBBING EFFECT",
+										["Bone"] = "lrigpelvis",
+									},
+								},
+								[5] = {
+									["children"] = {
+										[1] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(73.310272216797, 0.0058862725272775, 0.00074916175799444),
+												["Size"] = 0.525,
+												["ClassName"] = "model",
+												["Position"] = Vector(-3.553466796875, -0.315185546875, 3.9521484375),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[2] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.5, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-52.694175720215, -6.1774663925171, 3.1629436016083),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-5.36181640625, 0.50537109375, -2.4091796875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[3] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(-6.6136317253113, -3.8831853866577, 1.9291032552719),
+												["Size"] = 0.675,
+												["ClassName"] = "model",
+												["Position"] = Vector(-14.3232421875, 0.834228515625, 5.74169921875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[4] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-6.124267578125, 0.494384765625, -0.33154296875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[5] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+												["Angles"] = Angle(8.0724363327026, -3.3893117904663, 1.9350301027298),
+												["Size"] = 0.8,
+												["ClassName"] = "model",
+												["Position"] = Vector(-16.786376953125, 0.864013671875, 9.4140625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[6] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.7999999523163, 0.20000000298023, 0.5),
+												["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+												["Size"] = 0.4,
+												["ClassName"] = "model",
+												["Position"] = Vector(-8.525146484375, 0.54345703125, 2.75390625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[7] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Max"] = -19.4,
+												["ClassName"] = "proxy",
+												["UniqueID"] = "976475525",
+												["Axis"] = "y",
+												["InputMultiplier"] = 12,
+												["Min"] = 59.1,
+												["VariableName"] = "AngleOffset",
+											},
+										},
+										[8] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.2999999523163, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-70.848190307617, -9.1889181137085, 5.8501472473145),
+												["Size"] = 0.325,
+												["ClassName"] = "model",
+												["Position"] = Vector(-3.229736328125, 0.3759765625, -2.74951171875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[9] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(2, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-23.914695739746, -4.5109629631042, 2.0960781574249),
+												["Size"] = 0.475,
+												["ClassName"] = "model",
+												["Position"] = Vector(-10.757080078125, 0.667236328125, 3.8642578125),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[10] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.2999999523163, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-81.464385986328, -16.541213989258, 13.020378112793),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(-1.77099609375, 0.260986328125, -2.4541015625),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[11] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-76.162719726563, -11.467157363892, 8.0373487472534),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(0.495361328125, 0.083740234375, -1.90966796875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[12] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2025021590",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-73.366561889648, -10.090292930603, 6.7084183692932),
+												["Size"] = 0.3,
+												["ClassName"] = "model",
+												["Position"] = Vector(1.668212890625, -0.004638671875, -2.06982421875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[13] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "1269030789",
+												["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-76.162719726563, -11.467157363892, 8.0373487472534),
+												["Size"] = 0.25,
+												["ClassName"] = "model",
+												["Position"] = Vector(-0.51171875, 0.154541015625, -1.82958984375),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[14] = {
+											["children"] = {
+											},
+											["self"] = {
+												["UniqueID"] = "2574231161",
+												["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.40000000596046),
+												["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+												["Size"] = 0.4,
+												["ClassName"] = "model",
+												["Position"] = Vector(-7.732666015625, 0.563720703125, 0.732421875),
+												["Bone"] = "spine 4",
+												["Model"] = "models/pac/default.mdl",
+												["EditorExpand"] = true,
+											},
+										},
+										[15] = {
+											["children"] = {
+											},
+											["self"] = {
+												["Max"] = -51.1,
+												["ClassName"] = "proxy",
+												["UniqueID"] = "2743165982",
+												["Axis"] = "x",
+												["InputMultiplier"] = 12,
+												["Min"] = 23.2,
+												["VariableName"] = "AngleOffset",
+											},
+										},
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Position"] = Vector(-1.6890869140625, -2.793701171875, 2.4287109375),
+										["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+										["EditorExpand"] = true,
+										["AngleOffset"] = Angle(-15.472367286682, 18.241577148438, 0),
+										["Size"] = 0.35,
+										["PositionOffset"] = Vector(-2.0999999046326, 0, -0.30000001192093),
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Angles"] = Angle(84.978034973145, -3.9012862544041e-05, 0.002574848709628),
+									},
+								},
+							},
+							["self"] = {
+								["Event"] = "is_on_ground",
+								["EditorExpand"] = true,
+								["UniqueID"] = "3252905857",
+								["ClassName"] = "event",
+							},
+						},
+					},
+					["self"] = {
+						["Event"] = "vehicle_class",
+						["EditorExpand"] = true,
+						["UniqueID"] = "3098972402",
+						["ClassName"] = "event",
+					},
+				},
+			},
+			["self"] = {
+				["ClassName"] = "group",
+				["UniqueID"] = "1716709497",
+				["Name"] = "Wings fly",
+			},
+		},
+		[2] = {
+			["children"] = {
+			},
+			["self"] = {
+				["Name"] = "Edited by Galaxy",
+				["ClassName"] = "text",
+				["UniqueID"] = "3070526149",
+				["EditorExpand"] = true,
+			},
+		},
+		[3] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Position"] = Vector(0.368408203125, -0.2958984375, 3.08984375),
+										["Angles"] = Angle(47.163269042969, 179.99987792969, 179.99980163574),
+										["UniqueID"] = "3943005424",
+										["Size"] = 0.525,
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+									},
+								},
+								[2] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-31.147895812988, -4.8195123672485, 2.2391333580017),
+										["Size"] = 0.675,
+										["ClassName"] = "model",
+										["Position"] = Vector(-6.187255859375, 0.517822265625, 0.021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[3] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.951904296875, 0.503662109375, -2.40869140625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[4] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "3943005424",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-3.221923828125, 0.407470703125, -2.83447265625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[5] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-27.570728302002, -4.6618423461914, 2.1613347530365),
+										["Size"] = 0.8,
+										["ClassName"] = "model",
+										["Position"] = Vector(-7.78515625, 0.604736328125, 0.43896484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[6] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.877449035645, -4.9970798492432, 2.3358101844788),
+										["Size"] = 0.475,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.915283203125, 0.45166015625, -0.71533203125),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[7] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+										["Size"] = 0.325,
+										["ClassName"] = "model",
+										["Position"] = Vector(-0.48974609375, 0.2119140625, -2.47021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+							},
+							["self"] = {
+								["UniqueID"] = "4059920425",
+								["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+								["AngleOffset"] = Angle(-48.099998474121, 0, 0),
+								["Size"] = 0.35,
+								["Position"] = Vector(-3.2222290039063, -2.288330078125, -3.0400390625),
+								["ClassName"] = "model",
+								["Bone"] = "spine 4",
+								["Model"] = "models/pac/default.mdl",
+								["Angles"] = Angle(-85.91487121582, -105.36888885498, -79.467254638672),
+							},
+						},
+						[2] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Position"] = Vector(0.368408203125, -0.2958984375, 3.08984375),
+										["Angles"] = Angle(47.163269042969, 179.99987792969, 179.99980163574),
+										["UniqueID"] = "35590170",
+										["Size"] = 0.525,
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+									},
+								},
+								[2] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.951904296875, 0.503662109375, -2.40869140625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[3] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-27.570728302002, -4.6618423461914, 2.1613347530365),
+										["Size"] = 0.8,
+										["ClassName"] = "model",
+										["Position"] = Vector(-7.78515625, 0.604736328125, 0.43896484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[4] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-31.147895812988, -4.8195123672485, 2.2391333580017),
+										["Size"] = 0.675,
+										["ClassName"] = "model",
+										["Position"] = Vector(-6.187255859375, 0.517822265625, 0.021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[5] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-3.221923828125, 0.407470703125, -2.83447265625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[6] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.877449035645, -4.9970798492432, 2.3358101844788),
+										["Size"] = 0.475,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.915283203125, 0.45166015625, -0.71533203125),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[7] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+										["Size"] = 0.325,
+										["ClassName"] = "model",
+										["Position"] = Vector(-0.48974609375, 0.2119140625, -2.47021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+							},
+							["self"] = {
+								["Position"] = Vector(-3.4755859375, -2.784423828125, 3.59765625),
+								["Angles"] = Angle(40.103984832764, 0.00012613332364708, 0.00012278462236281),
+								["UniqueID"] = "3943005424",
+								["Size"] = 0.35,
+								["ClassName"] = "model",
+								["Bone"] = "spine 4",
+								["Model"] = "models/pac/default.mdl",
+								["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "event",
+						["UniqueID"] = "862154968",
+						["Event"] = "vehicle_class",
+						["EditorExpand"] = true,
+						["Invert"] = true,
+					},
+				},
+			},
+			["self"] = {
+				["ClassName"] = "group",
+				["UniqueID"] = "495251631",
+				["Name"] = "Wings Sitting",
+			},
+		},
+		[4] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "text",
+				["UniqueID"] = "766889210",
+				["Name"] = "Made by Gearbell",
+			},
+		},
+		[5] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+						[1] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Position"] = Vector(0.368408203125, -0.2958984375, 3.08984375),
+										["Angles"] = Angle(47.163269042969, 179.99987792969, 179.99980163574),
+										["UniqueID"] = "35590170",
+										["Size"] = 0.525,
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+									},
+								},
+								[2] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.951904296875, 0.503662109375, -2.40869140625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[3] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-27.570728302002, -4.6618423461914, 2.1613347530365),
+										["Size"] = 0.8,
+										["ClassName"] = "model",
+										["Position"] = Vector(-7.78515625, 0.604736328125, 0.43896484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[4] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-31.147895812988, -4.8195123672485, 2.2391333580017),
+										["Size"] = 0.675,
+										["ClassName"] = "model",
+										["Position"] = Vector(-6.187255859375, 0.517822265625, 0.021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[5] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "35590170",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-3.221923828125, 0.407470703125, -2.83447265625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[6] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.877449035645, -4.9970798492432, 2.3358101844788),
+										["Size"] = 0.475,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.915283203125, 0.45166015625, -0.71533203125),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[7] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+										["Size"] = 0.325,
+										["ClassName"] = "model",
+										["Position"] = Vector(-0.48974609375, 0.2119140625, -2.47021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+							},
+							["self"] = {
+								["UniqueID"] = "3943005424",
+								["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+								["AngleOffset"] = Angle(-48.099998474121, 0, 0),
+								["Size"] = 0.35,
+								["Position"] = Vector(-3.2222290039063, -2.288330078125, -3.0400390625),
+								["ClassName"] = "model",
+								["Bone"] = "spine 4",
+								["Model"] = "models/pac/default.mdl",
+								["Angles"] = Angle(-85.91487121582, -105.36888885498, -79.467254638672),
+							},
+						},
+						[2] = {
+							["children"] = {
+								[1] = {
+									["children"] = {
+									},
+									["self"] = {
+										["Position"] = Vector(0.368408203125, -0.2958984375, 3.08984375),
+										["Angles"] = Angle(47.163269042969, 179.99987792969, 179.99980163574),
+										["UniqueID"] = "1472390743",
+										["Size"] = 0.525,
+										["ClassName"] = "model",
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["Scale"] = Vector(1.1000000238419, 0.20000000298023, 0.30000001192093),
+									},
+								},
+								[2] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "2574231161",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-27.570728302002, -4.6618423461914, 2.1613347530365),
+										["Size"] = 0.8,
+										["ClassName"] = "model",
+										["Position"] = Vector(-7.78515625, 0.604736328125, 0.43896484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[3] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "1472390743",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-3.221923828125, 0.407470703125, -2.83447265625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[4] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "2574231161",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.891521453857, -4.9977803230286, 2.3365316390991),
+										["Size"] = 0.4,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.951904296875, 0.503662109375, -2.40869140625),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[5] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "2574231161",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-31.147895812988, -4.8195123672485, 2.2391333580017),
+										["Size"] = 0.675,
+										["ClassName"] = "model",
+										["Position"] = Vector(-6.187255859375, 0.517822265625, 0.021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[6] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "2574231161",
+										["Scale"] = Vector(2, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-34.877449035645, -4.9970798492432, 2.3358101844788),
+										["Size"] = 0.475,
+										["ClassName"] = "model",
+										["Position"] = Vector(-4.915283203125, 0.45166015625, -0.71533203125),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+								[7] = {
+									["children"] = {
+									},
+									["self"] = {
+										["UniqueID"] = "2574231161",
+										["Scale"] = Vector(1.7000000476837, 0.20000000298023, 0.30000001192093),
+										["Angles"] = Angle(-40.70703125, -5.3102951049805, 2.5282714366913),
+										["Size"] = 0.325,
+										["ClassName"] = "model",
+										["Position"] = Vector(-0.48974609375, 0.2119140625, -2.47021484375),
+										["Bone"] = "spine 4",
+										["Model"] = "models/pac/default.mdl",
+										["EditorExpand"] = true,
+									},
+								},
+							},
+							["self"] = {
+								["Position"] = Vector(-3.4755859375, -2.784423828125, 3.59765625),
+								["Angles"] = Angle(40.103984832764, 0.00012613332364708, 0.00012278462236281),
+								["UniqueID"] = "35590170",
+								["Size"] = 0.35,
+								["ClassName"] = "model",
+								["Bone"] = "spine 4",
+								["Model"] = "models/pac/default.mdl",
+								["Scale"] = Vector(1.1000000238419, 0.30000001192093, 0.30000001192093),
+							},
+						},
+					},
+					["self"] = {
+						["ClassName"] = "event",
+						["UniqueID"] = "4278097550",
+						["Event"] = "is_on_ground",
+						["EditorExpand"] = true,
+						["Invert"] = true,
+					},
+				},
+			},
+			["self"] = {
+				["ClassName"] = "group",
+				["UniqueID"] = "1861661633",
+				["Name"] = "Wings Standing",
+			},
+		},
+	},
+	["self"] = {
+		["ClassName"] = "group",
+		["UniqueID"] = "3598926878",
+		["Name"] = "WINGS",
+	},
+},
