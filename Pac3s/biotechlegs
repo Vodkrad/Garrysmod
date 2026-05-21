@@ -1,0 +1,252 @@
+[1] = {
+	["children"] = {
+		[1] = {
+			["children"] = {
+			},
+			["self"] = {
+				["Size"] = 0.525,
+				["Bone"] = "left thigh",
+				["UniqueID"] = "263173033",
+				["ClassName"] = "bone",
+			},
+		},
+		[2] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "1304219410",
+				["Name"] = "robothigh3",
+				["EditorExpand"] = true,
+				["Position"] = Vector(10.284999847412, 0.59600001573563, 0.20000000298023),
+				["ClassName"] = "model",
+				["Angles"] = Angle(89.799987792969, 179.80000305176, -179.19999694824),
+				["Bone"] = "right thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[3] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "model",
+				["Angles"] = Angle(-91.099998474121, -123.80000305176, -0.10000000149012),
+				["UniqueID"] = "1766901086",
+				["EditorExpand"] = true,
+				["Position"] = Vector(2.7000000476837, -0.5, -0.10000000149012),
+				["Bone"] = "left foot",
+				["Model"] = "https://www.dropbox.com/s/rgkjtnvpdoxtqjl/robofoot2.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[4] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "entity",
+				["UniqueID"] = "1698621508",
+				["MuteSounds"] = true,
+			},
+		},
+		[5] = {
+			["children"] = {
+				[1] = {
+					["children"] = {
+					},
+					["self"] = {
+						["Angles"] = Angle(0, -94, 0),
+						["ClassName"] = "clip",
+						["UniqueID"] = "690511403",
+						["Position"] = Vector(4.9000000953674, -7.9000000953674, 0),
+					},
+				},
+			},
+			["self"] = {
+				["Position"] = Vector(-3.0999999046326, 8, -0.30000001192093),
+				["Hide"] = true,
+				["Angles"] = Angle(-1.7999999523163, 0, -1),
+				["Size"] = 0.675,
+				["Material"] = "http://puu.sh/sblt6/bd6218b2a6.png",
+				["DoubleFace"] = true,
+				["EditorExpand"] = true,
+				["ClassName"] = "model",
+				["Bone"] = "spine 2",
+				["Model"] = "https://www.dropbox.com/s/ktgn68msslhyvh2/Backpack%20shit.obj?dl=0",
+				["UniqueID"] = "540951129",
+			},
+		},
+		[6] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "model",
+				["Angles"] = Angle(-91.099998474121, -123.80000305176, -0.10000000149012),
+				["UniqueID"] = "2085390700",
+				["EditorExpand"] = true,
+				["Position"] = Vector(2.7000000476837, -0.5, -0.10000000149012),
+				["Bone"] = "right foot",
+				["Model"] = "https://www.dropbox.com/s/rgkjtnvpdoxtqjl/robofoot2.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[7] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2835856136",
+				["Name"] = "robothigh2",
+				["EditorExpand"] = true,
+				["Position"] = Vector(9.9849996566772, -1.7039999961853, -0.000396728515625),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -7.4000000953674),
+				["Bone"] = "right thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[8] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "bone",
+				["UniqueID"] = "251407034",
+				["Bone"] = "right calf",
+				["Size"] = 0.1,
+				["ScaleChildren"] = true,
+			},
+		},
+		[9] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2647400268",
+				["Name"] = "robocalf",
+				["EditorExpand"] = true,
+				["Position"] = Vector(9.9849996566772, -1.7039999961853, -0.000396728515625),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -7.4000000953674),
+				["Bone"] = "right calf",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[10] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "1274647034",
+				["Name"] = "robothigh3",
+				["EditorExpand"] = true,
+				["Position"] = Vector(10.685000419617, 0.59600001573563, -0.40000000596046),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -179.19999694824),
+				["Bone"] = "left thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[11] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2247207413",
+				["Name"] = "robothigh3",
+				["EditorExpand"] = true,
+				["Position"] = Vector(10.284999847412, 0.59600001573563, 0.20000000298023),
+				["ClassName"] = "model",
+				["Angles"] = Angle(89.799987792969, 179.80000305176, -179.19999694824),
+				["Bone"] = "left thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[12] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "3436563887",
+				["Name"] = "robothigh",
+				["EditorExpand"] = true,
+				["Position"] = Vector(9.9849996566772, -1.7039999961853, -0.000396728515625),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -7.4000000953674),
+				["Bone"] = "left thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[13] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2447888646",
+				["Name"] = "robothigh3",
+				["EditorExpand"] = true,
+				["Position"] = Vector(10.685000419617, 0.59600001573563, -0.40000000596046),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -179.19999694824),
+				["Bone"] = "right thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[14] = {
+			["children"] = {
+			},
+			["self"] = {
+				["ClassName"] = "bone",
+				["UniqueID"] = "1033382036",
+				["Bone"] = "left calf",
+				["Size"] = 0.1,
+				["ScaleChildren"] = true,
+			},
+		},
+		[15] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2947025303",
+				["Name"] = "robocalf",
+				["EditorExpand"] = true,
+				["Position"] = Vector(9.9849996566772, -1.7039999961853, -0.000396728515625),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -7.4000000953674),
+				["Bone"] = "left calf",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[16] = {
+			["children"] = {
+			},
+			["self"] = {
+				["UniqueID"] = "2947025303",
+				["Name"] = "robothigh",
+				["EditorExpand"] = true,
+				["Position"] = Vector(9.9849996566772, -1.7039999961853, -0.000396728515625),
+				["ClassName"] = "model",
+				["Angles"] = Angle(-87.400001525879, 179.80000305176, -7.4000000953674),
+				["Bone"] = "right thigh",
+				["Model"] = "https://www.dropbox.com/s/8whhqf9ke4sm8wl/robocalf.obj?dl=0",
+				["Material"] = "http://i.imgur.com/nDXk9K3.jpg",
+			},
+		},
+		[17] = {
+			["children"] = {
+			},
+			["self"] = {
+				["Size"] = 0.525,
+				["Bone"] = "right thigh",
+				["UniqueID"] = "4213871088",
+				["ClassName"] = "bone",
+			},
+		},
+	},
+	["self"] = {
+		["EditorExpand"] = true,
+		["UniqueID"] = "2557255160",
+		["ClassName"] = "group",
+		["Name"] = "my outfit",
+		["Description"] = "add parts to me!",
+	},
+},
