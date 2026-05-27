@@ -1,0 +1,107 @@
+--@name E Door + Working Wire Lock
+--@server
+--@inputs Door Lock
+--@outputs Opened Locked
+
+wire.adjustInputs(
+    {"Door", "Lock"},
+    {"number", "number"}
+)
+
+wire.adjustOutputs(
+    {"Opened", "Locked"},
+    {"number", "number"}
+)
+
+local DOOR_MODEL = "models/props_doors/door03_slotted_left.mdl"
+
+local door = nil
+local isOpen = false
+local isLocked = false
+local lastDoor = 0
+local busy = false
+
+local closedAng = chip():getAngles()
+local openAng = closedAng + Angle(0, 90, 0)
+local doorPos = chip():getPos() + chip():getForward() * 80
+
+Opened = 0
+Locked = 0
+
+local function updateOutputs()
+    Opened = isOpen and 1 or 0
+    Locked = isLocked and 1 or 0
+end
+
+local function spawnDoor()
+    if door and door:isValid() then
+        door:remove()
+    end
+
+    door = prop.create(doorPos, closedAng, DOOR_MODEL, true)
+    door:setFrozen(true)
+end
+
+local function setDoor(open)
+    if busy then return end
+    if isLocked then return end
+    if not door or not door:isValid() then return end
+
+    busy = true
+    isOpen = open
+
+    door:setAngles(isOpen and openAng or closedAng)
+    updateOutputs()
+
+    timer.simple(0.3, function()
+        busy = false
+    end)
+end
+
+local function toggleDoor()
+    setDoor(not isOpen)
+end
+
+spawnDoor()
+updateOutputs()
+
+hook.add("input", "WireInputHandler", function(name, value)
+    if name == "Lock" then
+        isLocked = value ~= 0
+        updateOutputs()
+        return
+    end
+
+    if name == "Door" then
+        if value ~= 0 and lastDoor == 0 then
+            toggleDoor()
+        end
+
+        lastDoor = value
+    end
+end)
+
+hook.add("think", "WireLockFailsafe", function()
+    local lockValue = wire.ports.Lock or 0
+    isLocked = lockValue ~= 0
+
+    updateOutputs()
+end)
+
+hook.add("PlayerUse", "AnyoneUseStarfallDoor", function(ply, ent)
+    if not door or not door:isValid() then return end
+    if ent ~= door then return end
+
+    if isLocked then
+        return false
+    end
+
+    toggleDoor()
+    return false
+end)
+
+hook.add("Removed", "CleanupDoor", function()
+    if door and door:isValid() then
+        door:remove()
+    end
+end)
