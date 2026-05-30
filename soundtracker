@@ -1,0 +1,284 @@
+--@name Active Sound Monitor Screen Scroll
+--@author stonerrabbit
+--@shared
+
+local KEY_R_SAFE = KEY_R or 28
+local KEY_P_SAFE = KEY_P or 26
+
+if SERVER then
+    local ACTIVE_TIME = 20
+    local MAX_STORED_SOUNDS = 120
+    local MAX_SENT_SOUNDS = 25
+    local SEND_DELAY = 1.25
+
+    local sounds = {}
+
+    local function getCreator(ent)
+        if not ent or not ent:isValid() then
+            return "World / Unknown", "World"
+        end
+
+        if ent:isPlayer() then
+            return ent:getName(), "Player"
+        end
+
+        local ownerEnt = ent:getOwner()
+        if ownerEnt and ownerEnt:isValid() and ownerEnt:isPlayer() then
+            return ownerEnt:getName(), ent:getClass() or "Entity"
+        end
+
+        return "Unknown", ent:getClass() or "Entity"
+    end
+
+    local function makeSmallSendTable()
+        local sendTable = {}
+        local count = math.min(#sounds, MAX_SENT_SOUNDS)
+
+        for i = 1, count do
+            local s = sounds[i]
+            sendTable[i] = {
+                sound = s.sound,
+                creator = s.creator,
+                class = s.class,
+                volume = s.volume,
+                pitch = s.pitch
+            }
+        end
+
+        return sendTable
+    end
+
+    local function sendUpdate()
+        net.start("sound_monitor_update")
+        net.writeTable(makeSmallSendTable())
+        net.send()
+    end
+
+    hook.add("EntityEmitSound", "active_sound_monitor_hook", function(data)
+        local ent = data.Entity or data.entity
+        local creator, class = getCreator(ent)
+
+        table.insert(sounds, 1, {
+            sound = tostring(data.SoundName or data.soundname or "unknown"),
+            creator = creator,
+            class = class,
+            volume = tonumber(data.Volume or data.volume) or 1,
+            pitch = tonumber(data.Pitch or data.pitch) or 100,
+            time = timer.curtime()
+        })
+
+        while #sounds > MAX_STORED_SOUNDS do
+            table.remove(sounds)
+        end
+    end)
+
+    net.receive("sound_monitor_refresh", function()
+        sendUpdate()
+    end)
+
+    timer.create("active_sound_monitor_update", SEND_DELAY, 0, function()
+        local now = timer.curtime()
+
+        for i = #sounds, 1, -1 do
+            if now - sounds[i].time > ACTIVE_TIME then
+                table.remove(sounds, i)
+            end
+        end
+
+        sendUpdate()
+    end)
+end
+
+if CLIENT then
+    local sounds = {}
+    local scroll = 0
+    local maxScroll = 0
+    local paused = false
+    local screenFocused = false
+
+    local lastR = false
+    local lastP = false
+
+    local titleFont = render.createFont("Roboto", 28, 700)
+    local headFont = render.createFont("Roboto", 17, 700)
+    local rowFont = render.createFont("Roboto", 14, 500)
+    local smallFont = render.createFont("Roboto", 12, 500)
+
+    net.receive("sound_monitor_update", function()
+        local tbl = net.readTable() or {}
+        if not paused then
+            sounds = tbl
+        end
+    end)
+
+    local function refreshSounds()
+        paused = false
+        scroll = 0
+        net.start("sound_monitor_refresh")
+        net.send()
+    end
+
+    local function keyDownSafe(key)
+        if not key then return false end
+
+        if input and input.isKeyDown then
+            return input.isKeyDown(key)
+        end
+
+        if input and input.keyDown then
+            return input.keyDown(key)
+        end
+
+        return false
+    end
+
+    hook.add("mouseWheeled", "sound_monitor_mousewheel", function(delta)
+        if not screenFocused then return end
+
+        if delta > 0 then
+            scroll = math.max(0, scroll - 3)
+        elseif delta < 0 then
+            scroll = math.min(maxScroll, scroll + 3)
+        end
+    end)
+
+    hook.add("render", "active_sound_monitor_screen", function()
+        local w, h = render.getResolution()
+
+        local cx, cy = render.cursorPos()
+        screenFocused = cx ~= nil and cy ~= nil
+
+        if screenFocused then
+            local rDown = keyDownSafe(KEY_R_SAFE)
+            local pDown = keyDownSafe(KEY_P_SAFE)
+
+            if rDown and not lastR then
+                refreshSounds()
+            end
+
+            if pDown and not lastP then
+                paused = not paused
+            end
+
+            lastR = rDown
+            lastP = pDown
+        else
+            lastR = false
+            lastP = false
+        end
+
+        render.setColor(Color(5, 12, 7, 255))
+        render.drawRect(0, 0, w, h)
+
+        render.setColor(Color(12, 32, 18, 255))
+        render.drawRect(12, 12, w - 24, h - 24)
+
+        render.setFont(titleFont)
+        render.setColor(Color(110, 255, 120, 255))
+        render.drawText(w / 2, 24, "ACTIVE SOUND MONITOR", 1)
+
+        render.setFont(smallFont)
+
+        if not screenFocused then
+            render.setColor(Color(180, 180, 180, 255))
+            render.drawText(w / 2, 55, "Look at this screen to use Mouse Wheel / R / P", 1)
+        elseif paused then
+            render.setColor(Color(255, 210, 120, 255))
+            render.drawText(w / 2, 55, "PAUSED | Mouse Wheel Scroll | R Refresh/Resume | P Pause/Resume", 1)
+        else
+            render.setColor(Color(160, 220, 160, 255))
+            render.drawText(w / 2, 55, "Mouse Wheel Scroll | R Refresh | P Pause", 1)
+        end
+
+        local listX = 24
+        local listY = 90
+        local listW = w - 48
+        local listH = h - 115
+
+        render.setColor(Color(6, 18, 10, 255))
+        render.drawRect(listX, listY, listW, listH)
+
+        render.setColor(Color(80, 180, 90, 255))
+        render.drawRectOutline(listX, listY, listW, listH)
+
+        render.setFont(headFont)
+        render.setColor(Color(220, 255, 220, 255))
+        render.drawText(listX + 12, listY + 8, "Sound", 0)
+        render.drawText(listX + listW * 0.58, listY + 8, "Creator / Source", 0)
+        render.drawText(listX + listW * 0.84, listY + 8, "Vol", 0)
+        render.drawText(listX + listW * 0.92, listY + 8, "Pitch", 0)
+
+        if #sounds <= 0 then
+            render.setFont(headFont)
+            render.setColor(Color(120, 190, 120, 255))
+            render.drawText(w / 2, h / 2, "No active sounds detected", 1)
+            return
+        end
+
+        local rowH = 30
+        local firstRowY = listY + 38
+        local visibleRows = math.floor((listH - 45) / rowH)
+
+        maxScroll = math.max(0, #sounds - visibleRows)
+
+        if scroll > maxScroll then scroll = maxScroll end
+        if scroll < 0 then scroll = 0 end
+
+        render.setFont(rowFont)
+
+        for row = 1, visibleRows do
+            local index = row + scroll
+            local s = sounds[index]
+
+            if not s then break end
+
+            local y = firstRowY + ((row - 1) * rowH)
+
+            if index % 2 == 0 then
+                render.setColor(Color(18, 48, 25, 230))
+            else
+                render.setColor(Color(10, 28, 15, 230))
+            end
+
+            render.drawRect(listX + 8, y, listW - 16, rowH - 3)
+
+            local snd = s.sound or "unknown"
+            if #snd > 48 then
+                snd = string.sub(snd, 1, 45) .. "..."
+            end
+
+            local creator = (s.creator or "Unknown") .. " [" .. (s.class or "Entity") .. "]"
+            if #creator > 30 then
+                creator = string.sub(creator, 1, 27) .. "..."
+            end
+
+            render.setColor(Color(215, 255, 215, 255))
+            render.drawText(listX + 14, y + 7, snd, 0)
+
+            render.setColor(Color(120, 255, 130, 255))
+            render.drawText(listX + listW * 0.58, y + 7, creator, 0)
+
+            render.setColor(Color(215, 255, 215, 255))
+            render.drawText(listX + listW * 0.84, y + 7, tostring(math.round((s.volume or 1) * 100)) .. "%", 0)
+            render.drawText(listX + listW * 0.92, y + 7, tostring(math.round(s.pitch or 100)), 0)
+        end
+
+        local barX = listX + listW - 10
+        local barY = firstRowY
+        local barH = listH - 48
+
+        render.setColor(Color(20, 60, 28, 255))
+        render.drawRect(barX, barY, 4, barH)
+
+        if maxScroll > 0 then
+            local thumbH = math.max(22, barH * (visibleRows / #sounds))
+            local thumbY = barY + ((barH - thumbH) * (scroll / maxScroll))
+
+            render.setColor(Color(120, 255, 130, 255))
+            render.drawRect(barX - 2, thumbY, 8, thumbH)
+        else
+            render.setColor(Color(120, 255, 130, 255))
+            render.drawRect(barX - 2, barY, 8, barH)
+        end
+    end)
+end
