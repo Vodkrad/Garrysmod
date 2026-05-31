@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StonerRabbit's Server MOTD</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+body{
+    background:
+        radial-gradient(circle at center, rgba(0,255,100,0.15), transparent 45%),
+        linear-gradient(135deg,#010401,#071807,#021102,#010401);
+}
+
+/* ========================================================= */
+/* BACKGROUND EFFECTS                                        */
+/* ========================================================= */
+
+#background-effects{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    pointer-events:none;
+    z-index:0;
+}
+
+/* Smoke */
+
+.smoke{
+    position:absolute;
+    width:1200px;
+    height:350px;
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(255,255,255,0.08) 0%,
+            rgba(255,255,255,0.05) 35%,
+            rgba(255,255,255,0.02) 65%,
+            rgba(255,255,255,0) 100%
+        );
+
+    filter:blur(70px);
+
+    animation:smokeMove linear infinite;
+}
+
+.smoke1{
+    top:10%;
+    left:-1400px;
+    animation-duration:45s;
+}
+
+.smoke2{
+    top:40%;
+    left:-1700px;
+    animation-duration:65s;
+    animation-delay:-15s;
+}
+
+.smoke3{
+    top:70%;
+    left:-2000px;
+    animation-duration:55s;
+    animation-delay:-30s;
+}
+
+@keyframes smokeMove{
+    from{
+        transform:translateX(0) scale(1);
+    }
+
+    50%{
+        transform:translateX(130vw) scale(1.2);
+    }
+
+    to{
+        transform:translateX(260vw) scale(1);
+    }
+}
+
+/* Floating Leaves */
+
+.leaf{
+    position:absolute;
+    color:rgba(100,255,120,0.15);
+
+    text-shadow:
+        0 0 10px rgba(0,255,100,0.4),
+        0 0 20px rgba(0,255,100,0.3);
+
+    user-select:none;
+
+    animation:floatUp linear infinite;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(110vh) rotate(0deg);
+        opacity:0;
+    }
+
+    10%{
+        opacity:1;
+    }
+
+    90%{
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* ========================================================= */
+/* BORDER FRAME                                              */
+/* ========================================================= */
+
+.frame{
+    position:fixed;
+    inset:0;
+
+    border:48px solid transparent;
+
+    border-image-source:url("https://raw.githubusercontent.com/Vodkrad/Garrysmod/main/Pac3s/border2.png");
+    border-image-slice:128 fill;
+    border-image-repeat:stretch;
+    border-image-width:48px;
+
+    filter:
+        drop-shadow(0 0 8px #00ff55)
+        drop-shadow(0 0 18px #00ff55)
+        drop-shadow(0 0 30px #00ff55);
+
+    pointer-events:none;
+
+    z-index:1;
+}
+
+/* ========================================================= */
+/* CONTENT                                                   */
+/* ========================================================= */
+
+.container{
+    position:relative;
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:80px;
+
+    z-index:10;
+}
+
+.panel{
+    position:relative;
+
+    width:950px;
+    max-width:90%;
+
+    background:rgba(0,0,0,0.72);
+
+    backdrop-filter:blur(8px);
+
+    border:2px solid rgba(0,255,100,0.25);
+
+    border-radius:16px;
+
+    padding:35px;
+
+    box-shadow:
+        0 0 25px rgba(0,255,100,0.2),
+        inset 0 0 25px rgba(0,255,100,0.08);
+
+    text-align:center;
+
+    z-index:20;
+}
+
+.logo{
+    font-size:54px;
+    font-weight:bold;
+
+    color:#69ff7d;
+
+    text-shadow:
+        0 0 10px #00ff55,
+        0 0 25px #00ff55;
+
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:20px;
+    color:#baffc6;
+    margin-bottom:25px;
+}
+
+.welcome{
+    font-size:18px;
+    line-height:1.6;
+}
+
+/* ========================================================= */
+/* ADDONS BOX                                                */
+/* ========================================================= */
+
+.addons-box{
+    margin-top:20px;
+
+    background:rgba(0,50,0,0.40);
+
+    border:1px solid rgba(0,255,100,0.25);
+
+    border-radius:10px;
+
+    padding:18px;
+
+    text-align:center;
+}
+
+.addons-box h2{
+    color:#8cff9c;
+    margin-bottom:10px;
+}
+
+.addons-link{
+    display:inline-block;
+
+    padding:12px 20px;
+
+    background:rgba(0,255,100,0.15);
+
+    border:1px solid rgba(0,255,100,0.35);
+
+    border-radius:8px;
+
+    color:#7eff92;
+
+    font-weight:bold;
+
+    text-decoration:none;
+
+    transition:0.2s;
+}
+
+.addons-link:hover{
+    background:rgba(0,255,100,0.25);
+
+    box-shadow:0 0 15px rgba(0,255,100,0.35);
+}
+
+.addons-box p{
+    margin-top:12px;
+    color:#d8ffd8;
+}
+
+/* ========================================================= */
+/* RULES                                                     */
+/* ========================================================= */
+
+.rules{
+    margin-top:20px;
+
+    text-align:left;
+
+    background:rgba(0,35,0,0.45);
+
+    border:1px solid rgba(0,255,100,0.25);
+
+    border-radius:10px;
+
+    padding:20px;
+}
+
+.rules h2{
+    text-align:center;
+    color:#8cff9c;
+    margin-bottom:15px;
+}
+
+.rules ul{
+    padding-left:25px;
+}
+
+.rules li{
+    margin:10px 0;
+    font-size:17px;
+}
+
+/* ========================================================= */
+/* SERVER INFO                                               */
+/* ========================================================= */
+
+.server-info{
+    margin-top:20px;
+
+    background:rgba(0,25,0,0.4);
+
+    border:1px solid rgba(0,255,100,0.2);
+
+    border-radius:10px;
+
+    padding:15px;
+}
+
+.server-info p{
+    margin:6px 0;
+}
+
+.highlight{
+    color:#00ff66;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:25px;
+
+    color:#7eff92;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="background-effects">
+
+    <div class="smoke smoke1"></div>
+    <div class="smoke smoke2"></div>
+    <div class="smoke smoke3"></div>
+
+    <div class="leaf" style="left:5%;font-size:35px;animation-duration:18s;">☘</div>
+    <div class="leaf" style="left:12%;font-size:55px;animation-duration:24s;animation-delay:2s;">☘</div>
+    <div class="leaf" style="left:20%;font-size:42px;animation-duration:20s;animation-delay:4s;">☘</div>
+    <div class="leaf" style="left:30%;font-size:60px;animation-duration:28s;animation-delay:1s;">☘</div>
+    <div class="leaf" style="left:40%;font-size:45px;animation-duration:22s;animation-delay:7s;">☘</div>
+    <div class="leaf" style="left:50%;font-size:65px;animation-duration:26s;animation-delay:3s;">☘</div>
+    <div class="leaf" style="left:60%;font-size:40px;animation-duration:19s;animation-delay:6s;">☘</div>
+    <div class="leaf" style="left:70%;font-size:58px;animation-duration:25s;animation-delay:4s;">☘</div>
+    <div class="leaf" style="left:82%;font-size:48px;animation-duration:21s;animation-delay:8s;">☘</div>
+    <div class="leaf" style="left:94%;font-size:36px;animation-duration:30s;animation-delay:2s;">☘</div>
+
+</div>
+
+<div class="frame"></div>
+
+<div class="container">
+
+    <div class="panel">
+
+        <div class="logo">
+            STONERRABBIT'S SERVER
+        </div>
+
+        <div class="subtitle">
+            WIREMOD • STARFALL • SPROPS • MORE
+        </div>
+
+        <p class="welcome">
+            Welcome to the server! Kick back, build something awesome, and enjoy the community.
+        </p>
+
+        <div class="addons-box">
+
+            <h2>📦 ALL ADDONS FOUND HERE</h2>
+
+            <a class="addons-link"
+               href="https://steamcommunity.com/sharedfiles/filedetails/?id=764239718"
+               target="_blank">
+                OPEN WORKSHOP COLLECTION
+            </a>
+
+            <p>
+                Missing models, materials, maps, PAC3 content, Wiremod addons, or Starfall content?
+                Subscribe to our official Workshop Collection to get everything required for the server.
+            </p>
+
+        </div>
+
+        <div class="rules">
+
+            <h2>📜 SERVER RULES</h2>
+
+            <ul>
+                <li>No crashing, lagging, or exploiting.</li>
+                <li>Respect all players and staff.</li>
+                <li>No harassment, racism, or hate speech.</li>
+                <li>No prop spam or excessive sound spam.</li>
+                <li>Use Wiremod and Starfall responsibly.</li>
+                <li>Listen to staff when asked.</li>
+            </ul>
+
+        </div>
+
+        <div class="server-info">
+
+            <p><span class="highlight">Owner:</span> StonerRabbit</p>
+
+            <p><span class="highlight">Features:</span> Wiremod, StarfallEx, SProps, PAC3, Building</p>
+
+            <p><span class="highlight">Workshop:</span> Collection linked above</p>
+
+            <p><span class="highlight">Discord:</span> Add your Discord here</p>
+
+        </div>
+
+        <div class="footer">
+            HAVE FUN &amp; STAY HIGH 🌿
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
